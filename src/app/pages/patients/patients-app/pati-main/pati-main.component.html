@@ -1,0 +1,67 @@
+<h3>
+  {{ header }}: {{ description | uppercase }}
+</h3>
+<p [style.color]="counterStyleColor">You have <mark
+        class="{{ counterClass }}">{{ numberOfContacts }}</mark>
+  contacts right now.</p>
+
+
+    <input  value="Show Form"  class="primary"  type="button"  (click)="formHidden=false"/>
+    <input  value="Hide Form"  class="inverse"  type="button"  (click)="formHidden=true"/>
+
+    <form [ngClass]="{'hidden':formHidden}">
+        <fieldset>
+            <legend>Contact Form</legend>
+        </fieldset>
+    </form>
+
+    <section>
+        <label for="name">Nombres Completos </label> <br>
+        <input name="name" type="text" [(ngModel)]="contact.name" placeholder="Nombre y Apellido"/>
+        
+      </section>
+
+
+    <section>
+        <label for="isVIP">es VIP?</label>
+        <input name="isVIP" type="checkbox" [(ngModel)]="contact.isVIP" />
+     </section>
+
+
+      <section>
+        <label for="gender">Sexo</label> <br>
+        <input name="gender" value="m" type="radio" [(ngModel)]="contact.gender" />
+        <i> Masculino</i>
+        <input name="gender" value="f" type="radio" [(ngModel)]="contact.gender" />
+        <i> Femenino</i>
+      </section>
+      
+
+
+      <section>
+        <label for="workStatus">Work Status</label>
+        <select name="workStatus" [(ngModel)]="contact.workStatus">
+          <option *ngFor="let status of workStatuses" [value]="status.id">
+            <span>{{ status.description }}</span>
+          </option>
+        </select>
+      </section>
+
+
+      <section *ngIf="contact.workStatus=='3'; else education">
+        <label for="company">Company Name</label>
+        <input name="company" type="text" [(ngModel)]="contact.company" />
+      </section>
+      <ng-template #education>
+        <section>
+          <label for="education">Education</label>
+          <input name="education"
+                  type="text"
+                  [(ngModel)]="contact.education"
+                  placeholder="Education" />
+        </section>
+      </ng-template>
+
+
+
+      <pre>{{ contact | json }}</pre>

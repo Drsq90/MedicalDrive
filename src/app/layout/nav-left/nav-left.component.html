@@ -1,0 +1,189 @@
+<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+    <div class="sb-sidenav-menu">
+        <div class="nav">
+             
+           
+            <a class="nav-link"><img src="assets/img/error-404-monochrome.svg">
+                
+            </a>
+            <div class="sb-sidenav-menu-heading">Menu</div> 
+            <!-- Agenda-->
+            <a class="nav-link collapsed active" href="#" data-bs-toggle="collapse" data-bs-target="#agenda" aria-expanded="false" aria-controls="collapsePages">
+                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                Agenda
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="agenda" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link" routerLink="/schedule">
+                        Calendario                             
+                    </a>
+                    <a class="nav-link collapsed" routerLink="/setting" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Nueva Cita                              
+                    </a>
+                    
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Recordatorios                               
+                    </a>
+                    
+                </nav>
+            </div>
+                              
+            <!-- Pacientes-->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pacientes" aria-expanded="false" aria-controls="collapsePages">
+                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                Pacientes
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="pacientes" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Nuevo Paciente                               
+                    </a>
+                    
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Filtrado por Doctor                                
+                    </a>
+                    
+                </nav>
+            </div>
+            <!--Marketing-->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#marketing" aria-expanded="false" aria-controls="collapsePages">
+                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                Marketing
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="marketing" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Contenido
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="login.html">Nuevo Post</a>
+                            <a class="nav-link" href="register.html">Calendario</a>                                    
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Campañas
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="401.html">Nueva Campaña</a>
+                            <a class="nav-link" href="404.html">Mis Campañas</a>
+                           
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+            <!-- Administracion-->                    
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#admin" aria-expanded="false" aria-controls="collapsePages">
+                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                Administración
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="admin" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                        Facturación
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="">Recibo de caja</a>
+                            <a class="nav-link" href="">Saldo a favor</a>
+                            <a class="nav-link" href="">Nota de credito</a>
+                            <a class="nav-link" href="">Nota de debito</a>
+                            <a class="nav-link" href="">Liquidaciones</a>
+                            <a class="nav-link" href="">Traslados</a>
+                            <a class="nav-link" href="">Pagos</a>
+                            <a class="nav-link" href="">Ordenes de compra</a>
+                        </nav>
+                    </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Gestión de agenda                                
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Residuos                                
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Inventario                               
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                        Medicamentos y planes de formulación                              
+                    </a>
+                    
+                </nav>
+            </div>
+            <!-- Reportes -->                    
+            
+            <a class="nav-link collapsed" routerLink="/report" data-bs-toggle="collapse" data-bs-target="#reportes" aria-expanded="false" aria-controls="collapsePages">
+                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                Reportes
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>                        
+            </a>
+
+            <div class="collapse" id="reportes" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Indicadores                                
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Pacientes                               
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Tratamientos                               
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Facturación                             
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Convenios                               
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Efectividad                               
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Medicamentos                              
+                    </a>
+                    <a class="nav-link collapsed" href="#" aria-expanded="false">
+                        Cumpleaños                               
+                    </a>
+                    
+                </nav>
+            </div>
+            <li><hr class="dropdown-divider" /></li>
+
+             
+            <!-- Caja -->
+            <a class="nav-link"  routerLink="/cash-register"> 
+                <div class="sb-nav-link-icon"><i class="bi bi-terminal-plus"></i></div>
+                Caja
+            </a>
+            <!-- Tareas -->
+            <a class="nav-link" routerLink="/task"> 
+                <div class="sb-nav-link-icon"><i class="bi bi-terminal-plus"></i></div>
+                Tareas
+            </a>
+            <!-- Archivos -->
+            <a class="nav-link" routerLink="/task"> 
+                <div class="sb-nav-link-icon"><i class="bi bi-terminal-plus"></i></div>
+                File Manager
+            </a> 
+            
+
+            <li><hr class="dropdown-divider" /></li>
+            <a class="nav-link"  routerLink="/cash-register"> 
+                <div class="sb-nav-link-icon"><i class="bi bi-terminal-plus"></i></div>
+                Soporte Tecnico
+            </a> 
+
+        </div>
+    </div>
+    <div class="sb-sidenav-footer">
+        <div class="small">Logeado como:</div>
+        David Sanchez
+    </div>
+</nav>
