@@ -1,0 +1,277 @@
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <app-nav-left></app-nav-left>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Pacientes</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a routerLink="/" style="text-decoration: none;">Inicio</a></li>
+                    <li class="breadcrumb-item"><a routerLink="/patients" style="text-decoration: none;">Pacientes</a></li>
+                    <li class="breadcrumb-item active"> Nuevo</li>
+                </ol>
+            
+                <form #formDetailUser="ngForm" (ngSubmit)="onSubmit(formDetailUser)">
+                    <h3>Datos de identificación</h3>
+                
+                    <div class="form-group row">
+                      <label for="tipodocumento" class="col-sm-2 col-form-label">Tipo de Documento</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="tipodocumento" [(ngModel)]="newcontact.tipodocumento">
+                          <option *ngFor="let status of tipodocumento" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select>
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="numerodocumento" class="col-sm-2 col-form-label">Nº de Documento:</label>
+                      <div class="col-sm-3">
+                        <input name="numerodocumento" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.numerodocumento">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="numerohistoria" class="col-sm-2 col-form-label">Nº de Historia:</label>
+                      <div class="col-sm-3">
+                        <input name="numerohistoria" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.numerohistoria">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="nombres" class="col-sm-2 col-form-label">Nombres:</label>
+                      <div class="col-sm-3">
+                        <input name="nombres" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.nombres">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="apellidos" class="col-sm-2 col-form-label">Apellidos:</label>
+                      <div class="col-sm-3">
+                        <input name="apellidos" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.apellidos">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="" class="col-sm-2 col-form-label">Sexo:</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="sexo" [(ngModel)]="newcontact.sexo">
+                          <option *ngFor="let status of sexo" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select>
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="civil" class="col-sm-2 col-form-label">Estado civil:</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="civil" [(ngModel)]="newcontact.civil">
+                          <option *ngFor="let status of civil" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select>
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="pais" class="col-sm-2 col-form-label">País de nacimiento:</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="pais" [(ngModel)]="newcontact.paisdenacimiento">
+                          <option *ngFor="let status of paisdenacimiento" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select>
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="fechadenacimiento" class="col-sm-2 col-form-label">Fecha de nacimiento:</label>
+                      <div class="col-sm-3">
+                        <input name="fechadenacimiento" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.fechadenacimiento">
+                      </div>
+                    </div>    
+                    
+                    <div class="form-group row">
+                      <label for="telefono" class="col-sm-2 col-form-label">Telefono convencional:</label>
+                      <div class="col-sm-3">
+                        <input name="telefono" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.telefono">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="celular" class="col-sm-2 col-form-label">Celular:</label>
+                      <div class="col-sm-1">
+                        <select class="form-control" name="prefijo" [(ngModel)]="newcontact.prefijo">
+                          <option *ngFor="let status of prefijo" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select>
+                      </div>
+                      <div class="col-sm-2">
+                        <input name="celular" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.celular">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="correo" class="col-sm-2 col-form-label">Correo electronico:</label>
+                      <div class="col-sm-3">
+                        <input name="correo" type="email" class="form-control" placeholder="" [(ngModel)]="newcontact.correo">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="direcciondedomicilio" class="col-sm-2 col-form-label">Dirección de domicilio:</label>
+                      <div class="col-sm-3">
+                        <input name="direcciondedomicilio" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.direcciondedomicilio">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="correo" class="col-sm-2 col-form-label">Ocupación:</label>
+                      <div class="col-sm-3">
+                        <input name="correo" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.correo">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="correo" class="col-sm-2 col-form-label">Empresa:</label>
+                      <div class="col-sm-3">
+                        <input name="correo" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.correo">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="" class="col-sm-2 col-form-label">Tipo de seguro:</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="generalrepresentante" [(ngModel)]="newcontact.generalrepresentante">
+                          <option *ngFor="let status of generalrepresentante" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select> 
+                      </div>
+                    </div>
+                
+                    <br>
+                    <h3>Representante</h3>
+                
+                    <div class="form-group row">
+                      <label for="nombresrepresentante" class="col-sm-2 col-form-label">Nombres:</label>
+                      <div class="col-sm-3">
+                        <input name="nombresrepresentante" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.nombresrepresentante">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="apellidosrepresentante" class="col-sm-2 col-form-label">Apellidos:</label>
+                      <div class="col-sm-3">
+                        <input name="apellidosrepresentante" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.apellidosrepresentante">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="parentescorepresentante" class="col-sm-2 col-form-label">Parentesco:</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="parentescorepresentante" [(ngModel)]="newcontact.parentescorepresentante">
+                          <option *ngFor="let status of parentescorepresentante" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select>        
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="celularrepresentante" class="col-sm-2 col-form-label">Celular:</label>
+                      <div class="col-sm-1">
+                        <select class="form-control" name="prefijorepresentante" [(ngModel)]="newcontact.prefijorepresentante">
+                          <option *ngFor="let status of prefijorepresentante" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select> 
+                      </div>
+                      <div class="col-sm-2">
+                        <input name="celularrepresentante" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.celularrepresentante">
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="correorepresentante" class="col-sm-2 col-form-label">Correo electronico:</label>
+                      <div class="col-sm-3">
+                        <input name="correorepresentante" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.correorepresentante">
+                      </div>
+                    </div>
+                
+                    <br>
+                    <h3>Mercadeo</h3>
+                    <div class="form-group row">
+                      <label for="" class="col-sm-2 col-form-label">Convenio:</label>
+                      <div class="col-sm-3">
+                        <select class="form-control" name="generalrepresentante" [(ngModel)]="newcontact.generalrepresentante">
+                          <option *ngFor="let status of generalrepresentante" [value]="status.id">
+                          <span>{{ status.description }}</span>
+                        </option>
+                        </select> 
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="" class="col-sm-2 col-form-label">Cómo nos conocio</label>
+                      <div class="col-sm-3">
+                        
+                          <select class="form-control" name="generalrepresentante" [(ngModel)]="newcontact.generalrepresentante">
+                            <option *ngFor="let status of generalrepresentante" [value]="status.id">
+                            <span>{{ status.description }}</span>
+                          </option>
+                          </select> 
+                        
+                      </div>
+                    </div>
+                
+                    <div class="form-group row">
+                      <label for="" class="col-sm-2 col-form-label">Campaña</label>
+                      <div class="col-sm-3">
+                        
+                          <select class="form-control" name="generalrepresentante" [(ngModel)]="newcontact.generalrepresentante">
+                            <option *ngFor="let status of generalrepresentante" [value]="status.id">
+                            <span>{{ status.description }}</span>
+                          </option>
+                          </select> 
+                        
+                      </div>
+                    </div>
+                
+                    
+                
+                    <div class="form-group row">
+                      <label for="" class="col-sm-2 col-form-label">Remitido por:</label>
+                      
+                        <div class="col-sm-3">
+                          <select class="form-control" name="generalrepresentante" [(ngModel)]="newcontact.generalrepresentante">
+                            <option *ngFor="let status of generalrepresentante" [value]="status.id">
+                            <span>{{ status.description }}</span>
+                            </option>
+                          </select> 
+                        
+                      </div>
+                    </div>
+                
+                    <br>
+                    <h3>Alertas y notas</h3>
+                    <div class="form-group row">
+                      <label for="alertasynotas" class="col-sm-2 col-form-label">Información:</label>
+                      <div class="col-sm-3">        
+                        <textarea name="alertasynotas" type="text" class="form-control" placeholder="" [(ngModel)]="newcontact.alertasynotas" rows="3"></textarea>
+                      </div>
+                    </div>    
+                   
+                    <br>
+                    <button class="card bg-primary text-white mb-4" value="Save" type="submit" (click)="saveContact()"  >Guardar</button>
+                    
+                </form>
+             </div>
+        </main>
+        <app-footer></app-footer>
+    </div>
+</div>

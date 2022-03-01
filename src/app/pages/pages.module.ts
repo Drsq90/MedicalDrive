@@ -27,6 +27,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 
 
 
+
 @NgModule({
   declarations: [
     ScheduleComponent,
@@ -40,7 +41,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
     SettingComponent,
     TaskComponent,
     ProfileComponent,
-    NotificationsComponent
+    NotificationsComponent, 
+   
   ],
   imports: [
     CommonModule,
@@ -54,7 +56,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
     ReportAppModule,
     ScheduleAppModule,
     SettingAppModule,
-    TaskAppModule
+    TaskAppModule,
+
 
   ],
   exports: [
